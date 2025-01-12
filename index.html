@@ -28,6 +28,12 @@
       margin: 0;
       font-family: Figtree;
       box-sizing: border-box;
+      transition: all 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     /* Typography */
@@ -50,7 +56,6 @@
       font-weight: 500;
     }
 
-    .text-preset-3-bold,
     .text-preset-3 {
       font-size: 14px;
       font-weight: 500;
@@ -118,6 +123,12 @@
       border-radius: 4px;
       background-color: var(--color-yellow);
     }
+
+    .content__link:hover,
+    .content__link:active,
+    .content__link:focus {
+      color: var(--color-yellow);
+    }
     
     .content__description {
       color: var(--color-gray-500);
@@ -132,6 +143,25 @@
 
     .author > img {
       border-radius: 50%;
+    }
+
+    @media (max-width: 375px) {
+      .text-preset-1 {
+        font-size: 20px;
+      }
+
+      .text-preset-2 {
+        font-size: 14px;
+      }
+
+      .text-preset-3-bold,
+      .text-preset-3 {
+        font-size: 12px;
+      }
+
+      .text-preset-3-bold {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -149,9 +179,9 @@
           Published 21 Dec 2023
         </p>
 
-        <h1 class="text-preset-1">
+        <a class="text-preset-1 content__link" href="/">
           HTML & CSS foundations
-        </h1>
+        </a>
 
         <p class="text-preset-2 content__description">
           These languages are the backbone of every website, defining structure, content, and presentation.
